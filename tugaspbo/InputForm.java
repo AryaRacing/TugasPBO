@@ -7,7 +7,7 @@ import java.awt.event.*;
 public class InputForm extends JFrame {
 
     private JLabel nameLabel, nimLabel, menu;
-    private JTextField nameField, nimField;
+    private JTextField namaField, nimField;
     private JButton submitButton, logoutButton;
     private ResultForm resultForm;
 
@@ -16,15 +16,15 @@ public class InputForm extends JFrame {
 
         setLayout(new GridLayout(3, 2));
 
-        nameLabel = new JLabel("Name:");
+        namaLabel = new JLabel("Nama:");
         nimLabel = new JLabel("NIM:");
-        nameField = new JTextField();
+        namaField = new JTextField();
         nimField = new JTextField();
         submitButton = new JButton("Submit");
         logoutButton = new JButton("Logout");
         
-        add(nameLabel);
-        add(nameField);
+        add(namaLabel);
+        add(namaField);
         add(nimLabel);
         add(nimField);
         add(logoutButton, "North");
@@ -36,12 +36,12 @@ public class InputForm extends JFrame {
         submitButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
-                String name = nameField.getText();
+                String nama = namaField.getText();
                 String nim = nimField.getText();
 
                 resultForm.addData(name, nim);
 
-                nameField.setText("");
+                namaField.setText("");
                 nimField.setText("");
 
                 resultForm.setVisible(true);
