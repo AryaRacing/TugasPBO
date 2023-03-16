@@ -4,22 +4,22 @@ import javax.swing.*;
 import java.awt.*;
 
 public class ResultForm extends JFrame {
-    private JLabel nameLabel;
+    private JLabel namaLabel;
     private JLabel nimLabel;
     private JButton backButton;
 
     public ResultForm() {
         super("Result Form");
 
-        nameLabel = new JLabel();
-        nameLabel.setHorizontalAlignment(JLabel.CENTER);
+        namaLabel = new JLabel();
+        namaLabel.setHorizontalAlignment(JLabel.CENTER);
         nimLabel = new JLabel();
         nimLabel.setHorizontalAlignment(JLabel.CENTER);
 
         backButton = new JButton("Kembali");
 
         JPanel panel = new JPanel(new GridLayout(3, 1));
-        panel.add(nameLabel);
+        panel.add(namaLabel);
         panel.add(nimLabel);
         panel.add(backButton);
 
@@ -35,8 +35,8 @@ public class ResultForm extends JFrame {
         setLocationRelativeTo(null);
     }
 
-    public void addData(String name, String nim) {
-        nameLabel.setText("Name: " + name);
+    public void addData(String nama, String nim) {
+        namaLabel.setText("Nama: " + nama);
         nimLabel.setText("NIM: " + nim);
     }
 }
