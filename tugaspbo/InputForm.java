@@ -6,7 +6,7 @@ import java.awt.event.*;
 
 public class InputForm extends JFrame {
 
-    private JLabel nameLabel, nimLabel, menu;
+    private JLabel namaLabel, nimLabel, menu;
     private JTextField namaField, nimField;
     private JButton submitButton, logoutButton;
     private ResultForm resultForm;
@@ -39,7 +39,7 @@ public class InputForm extends JFrame {
                 String nama = namaField.getText();
                 String nim = nimField.getText();
 
-                resultForm.addData(name, nim);
+                resultForm.addData(nama, nim);
 
                 namaField.setText("");
                 nimField.setText("");
@@ -51,7 +51,7 @@ public class InputForm extends JFrame {
         logoutButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 int choice = JOptionPane.showConfirmDialog(InputForm.this,
-                        "Are you sure you want to log out?", "Confirm Logout", JOptionPane.YES_NO_OPTION);
+                        "Apakah anda yakin ingin logout", "Confirm Logout", JOptionPane.YES_NO_OPTION);
                 if (choice == JOptionPane.YES_OPTION) {
                     setVisible(false);
                     new LoginForm().setVisible(true);
@@ -72,4 +72,3 @@ public class InputForm extends JFrame {
         new InputForm();
     }
 }
-
