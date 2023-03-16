@@ -47,12 +47,12 @@ public class LoginForm extends JFrame implements ActionListener {
             String username = usernameField.getText();
             String password = new String(passwordField.getPassword());
 
-            if (username.equals("1") && password.equals("1")) {
-                JOptionPane.showMessageDialog(this, "Login successful!");
+            if (username.equals("Arya") && password.equals("123")) {
+                JOptionPane.showMessageDialog(this, "Login Berhasil");
                 inputForm.setVisible(true);
                 this.setVisible(false);
             } else {
-                JOptionPane.showMessageDialog(this, "Invalid username or password.");
+                JOptionPane.showMessageDialog(this, "Password atau username tidak valid");
             }
         }
     }
